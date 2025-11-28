@@ -8,7 +8,7 @@ pipeline {
         IMAGE_TAG = "latest"
 
         // --- SonarCloud ---
-        SONARQUBE_ENV = "sonar-server"              // Jenkins SonarCloud Server Name
+        SONARQUBE_ENV = "sonar-cloud"              // Jenkins SonarCloud Server Name
         SONAR_PROJECT_KEY = "Anmoldeep-Singh-Dhillon_cloud-repo"    // Your SonarCloud project key
         SONAR_ORG = "anmoldeep-singh-dhillon"            // Your org key
     }
