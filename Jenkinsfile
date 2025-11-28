@@ -9,8 +9,8 @@ pipeline {
 
         // --- SonarCloud ---
         SONARQUBE_ENV = "sonar-server"              // Jenkins SonarCloud Server Name
-        SONAR_PROJECT_KEY = "anmoldeep-singh-dhillon"    // Your SonarCloud project key
-        SONAR_ORG = "Anmoldeep-Singh-Dhillon"            // Your org key
+        SONAR_PROJECT_KEY = "Anmoldeep-Singh-Dhillon_cloud-repo"    // Your SonarCloud project key
+        SONAR_ORG = "anmoldeep-singh-dhillon"            // Your org key
     }
 
     stages {
