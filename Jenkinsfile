@@ -59,6 +59,9 @@ pipeline {
         }
 
         stage('Build Docker Image') {
+            when{
+                branch 'main'
+            }
             steps {
                 sh """
                     docker build -t ${REGISTRY}/${IMAGE_NAME}:${IMAGE_TAG} .
@@ -67,6 +70,9 @@ pipeline {
         }
 
         stage('Push Docker Image') {
+            when{
+                branch 'main'
+            }
             steps {
                 withCredentials([usernamePassword(credentialsId: 'dockerhub-creds', usernameVariable: 'USER', passwordVariable: 'PASS')]) {
                     sh """
@@ -78,6 +84,9 @@ pipeline {
         }
 
         stage('Deploy to Test (T) Server') {
+            when{
+                branch 'main'
+            }
             steps {
                 sshagent (['test-server-key']) {
                     sh """
